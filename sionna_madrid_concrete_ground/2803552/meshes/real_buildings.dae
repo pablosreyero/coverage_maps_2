@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-30T17:58:33</created>
+    <modified>2025-01-30T17:58:33</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="element-mesh" name="element">
+      <mesh>
+        <source id="element-mesh-positions">
+          <float_array id="element-mesh-positions-array" count="24">7.735592 -0.4897614 0 8.083321 5.120743 0 0.3562126 5.599373 0 0 0 0 7.735592 -0.4897614 7.580405 8.083321 5.120743 7.580405 0.3562126 5.599373 7.580405 0 0 7.580405</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element-mesh-normals">
+          <float_array id="element-mesh-normals-array" count="21">-0.06318616 -0.9980018 0 0.9980849 -0.06185948 0 0.06182318 0.9980872 0 -0.9979827 0.06348818 0 0 0 1 0.06182318 0.9980872 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element-mesh-vertices">
+          <input semantic="POSITION" source="#element-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#element-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 4 4 6 4 7 4 0 0 4 0 7 0 1 1 5 1 4 1 2 5 6 5 5 5 3 3 7 3 6 3 4 6 5 6 6 6</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="PSA_Villaverde-mesh" name="PSA Villaverde">
+      <mesh>
+        <source id="PSA_Villaverde-mesh-positions">
+          <float_array id="PSA_Villaverde-mesh-positions-array" count="72">0.7126961 28.07477 0 13.76716 27.75189 0 22.58997 377.0168 0 -239.9458 383.6568 0 -242.7236 273.5842 0 -201.5598 272.5363 0 -205.6197 111.8913 0 -194.6181 111.6126 0 -197.6077 -6.564026 0 -121.4691 -8.480805 0 -121.1804 3.063019 0 0 0 0 0.7126961 28.07477 16.67612 13.76716 27.75189 16.67612 22.58997 377.0168 16.67612 -239.9458 383.6568 16.67612 -242.7236 273.5842 16.67612 -201.5598 272.5363 16.67612 -205.6197 111.8913 16.67612 -194.6181 111.6126 16.67612 -197.6077 -6.564026 16.67612 -121.4691 -8.480805 16.67612 -121.1804 3.063019 16.67612 0 0 16.67612</float_array>
+          <technique_common>
+            <accessor source="#PSA_Villaverde-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="PSA_Villaverde-mesh-normals">
+          <float_array id="PSA_Villaverde-mesh-normals-array" count="78">0.999678 -0.02537745 0 -0.02472543 -0.9996943 0 0.9996811 -0.02525299 0 0.02528387 0.9996803 0 -0.9996817 0.0252282 0 -0.02544808 -0.9996762 0 -0.9996808 0.02526396 0 -0.02532052 -0.9996794 0 -0.9996802 0.02528989 0 -0.02516686 -0.9996833 0 0.9996875 -0.02499896 0 -0.02526843 -0.9996807 0 0 0 1 -0.02472543 -0.9996944 0 0.9996811 -0.02525299 0 0.02528387 0.9996803 0 -0.9996817 0.02522844 0 -0.9996808 0.02526432 0 -0.9996802 0.02528965 0 -0.02516686 -0.9996833 0 0.9996875 -0.02499771 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#PSA_Villaverde-mesh-normals-array" count="26" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="PSA_Villaverde-mesh-vertices">
+          <input semantic="POSITION" source="#PSA_Villaverde-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="34">
+          <input semantic="VERTEX" source="#PSA_Villaverde-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#PSA_Villaverde-mesh-normals" offset="1"/>
+          <p>0 0 23 0 11 0 1 1 12 1 0 1 2 2 13 2 1 2 3 3 14 3 2 3 4 4 15 4 3 4 5 5 16 5 4 5 6 6 17 6 5 6 7 7 18 7 6 7 8 8 19 8 7 8 9 9 20 9 8 9 10 10 21 10 9 10 11 11 22 11 10 11 12 12 19 12 22 12 0 0 12 0 23 0 1 13 13 13 12 13 2 14 14 14 13 14 3 15 15 15 14 15 4 16 16 16 15 16 5 5 17 5 16 5 6 17 18 17 17 17 7 7 19 7 18 7 8 18 20 18 19 18 9 19 21 19 20 19 10 20 22 20 21 20 11 11 23 11 22 11 12 12 13 12 14 12 14 12 15 12 17 12 15 21 16 21 17 21 17 22 18 22 19 22 22 12 23 12 12 12 12 23 14 23 17 23 19 24 20 24 22 24 20 25 21 25 22 25 12 12 17 12 19 12</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_431_osm_buildings" name="map_431.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="PSA_Villaverde" name="PSA Villaverde" type="NODE">
+          <matrix sid="transform">1 0 0 -45.76707 0 1 0 -317.3134 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#PSA_Villaverde-mesh" name="PSA Villaverde">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="element" name="element" type="NODE">
+          <matrix sid="transform">1 0 0 38.80949 0 1 0 85.71873 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element-mesh" name="element">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

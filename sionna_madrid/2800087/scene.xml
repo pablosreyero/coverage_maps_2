@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scene version="2.1.0">
+  <!--Defaults, these can be set via the command line: -Darg=value-->
+  <!--Camera and Rendering Parameters-->
+  <integrator type="path" id="elm__0" name="elm__0">
+    <integer name="max_depth" value="12" />
+  </integrator>
+  <!--Materials-->
+  <bsdf type="twosided" id="mat-itu_concrete" name="mat-itu_concrete">
+    <bsdf type="diffuse">
+      <rgb value="0.539479 0.539479 0.53948" name="reflectance" />
+    </bsdf>
+  </bsdf>
+  <bsdf type="twosided" id="mat-itu_marble" name="mat-itu_marble">
+    <bsdf type="diffuse">
+      <rgb value="0.701101 0.644479 0.48515" name="reflectance" />
+    </bsdf>
+  </bsdf>
+  <bsdf type="twosided" id="mat-itu_wood" name="mat-itu_wood">
+    <bsdf type="diffuse">
+      <rgb value="0.043 0.58 0.184" name="reflectance" />
+    </bsdf>
+  </bsdf>
+  <bsdf type="twosided" id="mat-itu_very_dry_ground" name="mat-itu_very_dry_ground">
+    <bsdf type="diffuse">
+      <rgb value="0.91 0.569 0.055" name="reflectance" />
+    </bsdf>
+  </bsdf>
+  <!--Shapes-->
+  <shape type="ply" id="mesh-ground">
+    <string name="filename" value="meshes/ground.ply" />
+    <ref id="mat-itu_very_dry_ground" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_element.001">
+    <string name="filename" value="meshes/real_element.001.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_element">
+    <string name="filename" value="meshes/real_element.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_element.003">
+    <string name="filename" value="meshes/real_element.003.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_SET Campo de las Naciones">
+    <string name="filename" value="meshes/real_SET Campo de las Naciones.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_Espacio Raro">
+    <string name="filename" value="meshes/real_Espacio Raro.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_element.002">
+    <string name="filename" value="meshes/real_element.002.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <shape type="ply" id="mesh-real_element.004">
+    <string name="filename" value="meshes/real_element.004.ply" />
+    <ref id="mat-itu_concrete" name="bsdf" />
+    <boolean name="face_normals" value="true" />
+  </shape>
+  <!--Volumes-->
+
+<!-- Emitters -->
+    <emitter type="constant" id="World">
+        <rgb value="1.000000 1.000000 1.000000" name="radiance"/>
+    </emitter>
+</scene>

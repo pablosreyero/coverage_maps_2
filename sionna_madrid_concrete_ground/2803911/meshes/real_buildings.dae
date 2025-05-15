@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-30T18:03:13</created>
+    <modified>2025-01-30T18:03:13</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="element_003-mesh" name="element.003">
+      <mesh>
+        <source id="element_003-mesh-positions">
+          <float_array id="element_003-mesh-positions-array" count="24">4.445999 -15.61808 0 61.49655 0.7912064 0 56.55083 16.32019 0 0 0 0 4.445999 -15.61808 19.41237 61.49655 0.7912064 19.41237 56.55083 16.32019 19.41237 0 0 19.41237</float_array>
+          <technique_common>
+            <accessor source="#element_003-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element_003-mesh-normals">
+          <float_array id="element_003-mesh-normals-array" count="21">-0.9617889 -0.2737924 0 0.2764203 -0.9610369 0 0.9528427 0.3034648 0 -0.2772775 0.9607899 0 0 0 1 0.952843 0.3034641 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#element_003-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element_003-mesh-vertices">
+          <input semantic="POSITION" source="#element_003-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#element_003-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element_003-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 4 4 6 4 7 4 0 0 4 0 7 0 1 1 5 1 4 1 2 5 6 5 5 5 3 3 7 3 6 3 4 6 5 6 6 6</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="element_002-mesh" name="element.002">
+      <mesh>
+        <source id="element_002-mesh-positions">
+          <float_array id="element_002-mesh-positions-array" count="114">-9.425139 -17.71097 0 -13.97261 -21.22868 0 -65.45997 -35.73357 0 -60.95488 -51.73019 0 -7.409616 -36.64641 0 -8.239521 -33.72984 0 -0.06760406 -31.42549 0 2.083385 -39.05086 0 28.92792 -31.48097 0 25.96392 -20.9613 0 24.38035 -21.41772 0 23.87224 -19.60322 0 19.59576 -20.81663 0 20.06152 -22.47529 0 9.992722 -25.32513 0 6.800159 -23.58857 0 16.83498 -5.109468 0 5.114838 1.257935 0 0 0 0 -9.425139 -17.71097 16.08543 -13.97261 -21.22868 16.08543 -65.45997 -35.73357 16.08543 -60.95488 -51.73019 16.08543 -7.409616 -36.64641 16.08543 -8.239521 -33.72984 16.08543 -0.06760406 -31.42549 16.08543 2.083385 -39.05086 16.08543 28.92792 -31.48097 16.08543 25.96392 -20.9613 16.08543 24.38035 -21.41772 16.08543 23.87224 -19.60322 16.08543 19.59576 -20.81663 16.08543 20.06152 -22.47529 16.08543 9.992722 -25.32513 16.08543 6.800159 -23.58857 16.08543 16.83498 -5.109468 16.08543 5.114838 1.257935 16.08543 0 0 16.08543</float_array>
+          <technique_common>
+            <accessor source="#element_002-mesh-positions-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element_002-mesh-normals">
+          <float_array id="element_002-mesh-normals-array" count="120">-0.8827813 0.4697843 0 -0.6118564 0.7909689 0 -0.2711625 0.9625336 0 -0.9625563 -0.2710823 0 0.2711483 -0.9625376 0 0.9618197 0.2736843 0 0.2714 -0.9624667 0 -0.9624417 -0.2714886 0 0.2714059 -0.9624651 0 0.9625236 0.2711982 0 -0.2769504 0.9608842 0 0.9629574 0.2696539 0 -0.2729653 0.9620239 0 -0.9627614 -0.2703529 0 -0.2723389 0.9622014 0 0.4778274 0.8784539 0 0.8787875 -0.4772135 0 0.4773837 0.878695 0 -0.2388217 0.9710635 0 0 0 1 -0.6118566 0.7909688 0 0.2711484 -0.9625376 0 0.9618197 0.273684 0 0.2714 -0.9624667 0 0.9625235 0.2711985 0 -0.2769498 0.9608845 0 -0.2729656 0.9620239 0 -0.9627619 -0.2703508 0 0.4778272 0.8784539 0 0.8787875 -0.4772135 0 0 0 1 2.26142e-7 0 1 0 0 1 -1.11191e-6 0 1 2.28362e-7 0 1 0 0 1 0 0 1 9.11095e-7 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#element_002-mesh-normals-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element_002-mesh-vertices">
+          <input semantic="POSITION" source="#element_002-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="55">
+          <input semantic="VERTEX" source="#element_002-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element_002-mesh-normals" offset="1"/>
+          <p>0 0 37 0 18 0 1 1 19 1 0 1 2 2 20 2 1 2 3 3 21 3 2 3 4 4 22 4 3 4 5 5 23 5 4 5 6 6 24 6 5 6 7 7 25 7 6 7 8 8 26 8 7 8 9 9 27 9 8 9 10 10 28 10 9 10 11 11 29 11 10 11 12 12 30 12 11 12 13 13 31 13 12 13 14 14 32 14 13 14 15 15 33 15 14 15 16 16 34 16 15 16 17 17 35 17 16 17 18 18 36 18 17 18 25 19 33 19 34 19 0 0 19 0 37 0 1 20 20 20 19 20 2 2 21 2 20 2 3 3 22 3 21 3 4 21 23 21 22 21 5 22 24 22 23 22 6 23 25 23 24 23 7 7 26 7 25 7 8 8 27 8 26 8 9 24 28 24 27 24 10 25 29 25 28 25 11 11 30 11 29 11 12 26 31 26 30 26 13 27 32 27 31 27 14 14 33 14 32 14 15 28 34 28 33 28 16 29 35 29 34 29 17 17 36 17 35 17 18 18 37 18 36 18 20 30 21 30 22 30 22 31 23 31 24 31 25 30 26 30 33 30 26 30 27 30 33 30 20 32 22 32 24 32 27 33 28 33 29 33 20 30 24 30 19 30 24 34 25 34 19 34 36 30 37 30 34 30 37 35 19 35 34 35 27 36 29 36 32 36 33 30 27 30 32 30 29 37 30 37 32 37 30 30 31 30 32 30 19 38 25 38 34 38 34 39 35 39 36 39</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="element_001-mesh" name="element.001">
+      <mesh>
+        <source id="element_001-mesh-positions">
+          <float_array id="element_001-mesh-positions-array" count="24">-8.908745 -4.886856 0 -6.071888 -10.0521 0 2.836864 -5.176376 0 0 0 0 -8.908745 -4.886856 7.43683 -6.071888 -10.0521 7.43683 2.836864 -5.176376 7.43683 0 0 7.43683</float_array>
+          <technique_common>
+            <accessor source="#element_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element_001-mesh-normals">
+          <float_array id="element_001-mesh-normals-array" count="24">-0.4809398 0.8767538 0 -0.8765046 -0.4813937 0 0.4800969 -0.8772155 0 0.8769405 0.480599 0 0 0 1 -0.8765047 -0.4813935 0 0.4800969 -0.8772155 0 -1.27269e-7 0 1</float_array>
+          <technique_common>
+            <accessor source="#element_001-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element_001-mesh-vertices">
+          <input semantic="POSITION" source="#element_001-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#element_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element_001-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 5 4 7 4 4 4 0 0 4 0 7 0 1 5 5 5 4 5 2 6 6 6 5 6 3 3 7 3 6 3 5 7 6 7 7 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="element-mesh" name="element">
+      <mesh>
+        <source id="element-mesh-positions">
+          <float_array id="element-mesh-positions-array" count="24">-5.656906 -2.538017 0 -3.082588 -8.393456 0 3.56514 -5.087341 0 0 0 0 -5.656906 -2.538017 7.436043 -3.082588 -8.393456 7.436043 3.56514 -5.087341 7.436043 0 0 7.436043</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element-mesh-normals">
+          <float_array id="element-mesh-normals-array" count="18">-0.4093464 0.9123791 0 -0.9154345 -0.4024668 0 0.4453 -0.8953815 0 0.8189293 0.5738946 0 0 0 1 -0.9154345 -0.4024669 0</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-normals-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element-mesh-vertices">
+          <input semantic="POSITION" source="#element-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#element-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 5 4 7 4 4 4 0 0 4 0 7 0 1 5 5 5 4 5 2 2 6 2 5 2 3 3 7 3 6 3 5 4 6 4 7 4</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Embajada_de_Corea_del_Norte-mesh" name="Embajada de Corea del Norte">
+      <mesh>
+        <source id="Embajada_de_Corea_del_Norte-mesh-positions">
+          <float_array id="Embajada_de_Corea_del_Norte-mesh-positions-array" count="108">-8.188958 -5.465679 0 -4.742409 -10.64208 0 -6.622398 -11.9111 0 -4.590034 -14.89449 0 -5.631653 -15.58466 0 -0.4745178 -23.29916 0 -1.22821 -23.94481 0 1.676384 -28.3197 0 8.044648 -23.98945 0 6.859093 -22.34191 0 13.84554 -17.77789 0 12.10956 -15.26205 0 19.37546 -10.36406 0 14.85343 -3.651451 0 11.1612 -6.067043 0 9.086495 -2.916679 0 4.25103 -6.245075 0 0 0 0 -8.188958 -5.465679 13.32035 -4.742409 -10.64208 13.32035 -6.622398 -11.9111 13.32035 -4.590034 -14.89449 13.32035 -5.631653 -15.58466 13.32035 -0.4745178 -23.29916 13.32035 -1.22821 -23.94481 13.32035 1.676384 -28.3197 13.32035 8.044648 -23.98945 13.32035 6.859093 -22.34191 13.32035 13.84554 -17.77789 13.32035 12.10956 -15.26205 13.32035 19.37546 -10.36406 13.32035 14.85343 -3.651451 13.32035 11.1612 -6.067043 13.32035 9.086495 -2.916679 13.32035 4.25103 -6.245075 13.32035 0 0 13.32035</float_array>
+          <technique_common>
+            <accessor source="#Embajada_de_Corea_del_Norte-mesh-positions-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Embajada_de_Corea_del_Norte-mesh-normals">
+          <float_array id="Embajada_de_Corea_del_Norte-mesh-normals-array" count="117">-0.5551484 0.8317514 0 -0.8323757 -0.5542117 0 -0.5594798 0.828844 0 -0.8264551 -0.5630028 0 -0.5523456 0.8336153 0 -0.8313468 -0.5557539 0 -0.6505723 0.7594444 0 -0.8331034 -0.5531174 0 0.562295 -0.8269367 0 0.8116919 0.584086 0 0.5469101 -0.8371914 0 0.8230718 0.5679374 0 0.5589632 -0.8291925 0 0.8293631 0.55871 0 -0.5474782 0.83682 0 0.8351614 0.5500051 0 -0.5669931 0.8237226 0 0.8266569 0.5627063 0 0 0 1 -0.8323758 -0.5542117 0 -0.5594799 0.828844 0 -0.826455 -0.563003 0 -0.5523454 0.8336155 0 -0.8313469 -0.5557539 0 -0.6505723 0.7594445 0 0.562295 -0.8269368 0 0.8116922 0.5840856 0 0.5469102 -0.8371914 0 0.8230714 0.5679379 0 0.5589631 -0.8291925 0 0.8293633 0.5587098 0 -0.5474784 0.8368198 0 0.8351615 0.5500049 0 1.316e-6 0 1 -2.4413e-7 0 1 -2.99194e-7 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Embajada_de_Corea_del_Norte-mesh-normals-array" count="39" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Embajada_de_Corea_del_Norte-mesh-vertices">
+          <input semantic="POSITION" source="#Embajada_de_Corea_del_Norte-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="52">
+          <input semantic="VERTEX" source="#Embajada_de_Corea_del_Norte-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Embajada_de_Corea_del_Norte-mesh-normals" offset="1"/>
+          <p>0 0 35 0 17 0 1 1 18 1 0 1 2 2 19 2 1 2 3 3 20 3 2 3 4 4 21 4 3 4 5 5 22 5 4 5 6 6 23 6 5 6 7 7 24 7 6 7 8 8 25 8 7 8 9 9 26 9 8 9 10 10 27 10 9 10 11 11 28 11 10 11 12 12 29 12 11 12 13 13 30 13 12 13 14 14 31 14 13 14 15 15 32 15 14 15 16 16 33 16 15 16 17 17 34 17 16 17 34 18 35 18 19 18 0 0 18 0 35 0 1 19 19 19 18 19 2 20 20 20 19 20 3 21 21 21 20 21 4 22 22 22 21 22 5 23 23 23 22 23 6 24 24 24 23 24 7 7 25 7 24 7 8 25 26 25 25 25 9 26 27 26 26 26 10 27 28 27 27 27 11 28 29 28 28 28 12 29 30 29 29 29 13 30 31 30 30 30 14 31 32 31 31 31 15 32 33 32 32 32 16 16 34 16 33 16 17 17 35 17 34 17 35 18 18 18 19 18 19 18 20 18 21 18 21 33 22 33 23 33 23 18 24 18 25 18 25 34 26 34 27 34 27 35 28 35 29 35 29 36 30 36 32 36 30 18 31 18 32 18 32 18 33 18 34 18 25 37 27 37 23 37 27 18 29 18 34 18 23 18 27 18 21 18 19 18 21 18 34 18 21 18 27 18 34 18 29 38 32 38 34 38</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_450_osm_buildings" name="map_450.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Embajada_de_Corea_del_Norte" name="Embajada de Corea del Norte" type="NODE">
+          <matrix sid="transform">1 0 0 -94.12724 0 1 0 -29.17718 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Embajada_de_Corea_del_Norte-mesh" name="Embajada de Corea del Norte">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="element" name="element" type="NODE">
+          <matrix sid="transform">1 0 0 -84.92263 0 1 0 -70.51022 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element-mesh" name="element">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="element_001" name="element.001" type="NODE">
+          <matrix sid="transform">1 0 0 -54.79189 0 1 0 -40.03122 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element_001-mesh" name="element.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="element_002" name="element.002" type="NODE">
+          <matrix sid="transform">1 0 0 33.9477 0 1 0 21.77324 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element_002-mesh" name="element.002">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="element_003" name="element.003" type="NODE">
+          <matrix sid="transform">1 0 0 71.35199 0 1 0 33.13922 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element_003-mesh" name="element.003">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-30T16:22:29</created>
+    <modified>2025-01-30T16:22:29</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Centro_de_Transportes_de_Madrid-mesh" name="Centro de Transportes de Madrid">
+      <mesh>
+        <source id="Centro_de_Transportes_de_Madrid-mesh-positions">
+          <float_array id="Centro_de_Transportes_de_Madrid-mesh-positions-array" count="102">0 0 15.5678 -58.81251 -45.66309 15.5678 -120.5501 33.97553 15.5678 -93.88348 54.79192 15.5678 -86.20773 40.55408 15.5678 18.63418 39.81903 15.5678 1.458816 27.02837 15.5678 5.843858 21.55146 15.5678 -8.032185 9.139325 15.5678 -19.72846 2.927704 15.5678 -56.62409 -26.30465 15.5678 -77.43804 1.45859 15.5678 -41.28037 30.32349 15.5678 -77.43788 18.63519 15.5678 -86.20803 11.32158 15.5678 -101.9159 31.78228 15.5678 -93.14575 39.08473 15.5678 0 0 0 -58.81251 -45.66309 0 -120.5501 33.97553 0 -93.88348 54.79192 0 -86.20773 40.55408 0 18.63418 39.81903 0 1.458816 27.02837 0 5.843858 21.55146 0 -8.032185 9.139325 0 -19.72846 2.927704 0 -56.62409 -26.30465 0 -77.43804 1.45859 0 -41.28037 30.32349 0 -77.43788 18.63519 0 -86.20803 11.32158 0 -101.9159 31.78228 0 -93.14575 39.08473 0</float_array>
+          <technique_common>
+            <accessor source="#Centro_de_Transportes_de_Madrid-mesh-positions-array" count="34" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Centro_de_Transportes_de_Madrid-mesh-normals">
+          <float_array id="Centro_de_Transportes_de_Madrid-mesh-normals-array" count="99">-0.7930467 -0.6091609 0 0.7932071 0.6089521 0 -0.6404511 0.767999 0 0.8001174 0.5998434 0 0.6398746 -0.7684794 0 0.6238879 -0.781514 0 0.6666973 -0.7453286 0 -0.7859469 -0.6182941 0 0.007010817 0.9999755 0 0.7806246 0.6250003 0 -0.6210074 0.7838048 0 0.8802331 0.4745417 0 0 0 1 0.5972809 -0.8020323 0 -0.6153339 0.7882667 0 0.6132712 -0.7898725 0 0.7511382 0.6601451 0 -0.7903303 -0.6126812 0 -0.6404504 0.7679995 0 0.6398739 -0.76848 0 0.6238878 -0.7815139 0 -0.7859469 -0.6182942 0 -0.6210075 0.7838047 0 0.8802335 0.474541 0 1.82691e-7 0 1 -2.63262e-7 0 1 0.5972809 -0.8020321 0 -0.6153336 0.7882669 0 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Centro_de_Transportes_de_Madrid-mesh-normals-array" count="33" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Centro_de_Transportes_de_Madrid-mesh-vertices">
+          <input semantic="POSITION" source="#Centro_de_Transportes_de_Madrid-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="53">
+          <input semantic="VERTEX" source="#Centro_de_Transportes_de_Madrid-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Centro_de_Transportes_de_Madrid-mesh-normals" offset="1"/>
+          <p>30 0 16 0 33 0 32 1 14 1 31 1 31 2 13 2 30 2 28 3 10 3 27 3 33 4 15 4 32 4 29 5 11 5 28 5 24 6 8 6 25 6 26 7 12 7 29 7 21 8 5 8 22 8 23 9 7 9 24 9 27 10 9 10 26 10 20 11 4 11 21 11 14 12 1 12 11 12 22 13 6 13 23 13 19 14 3 14 20 14 12 12 8 12 6 12 17 15 1 15 18 15 25 16 0 16 17 16 18 17 2 17 19 17 30 0 13 0 16 0 32 1 15 1 14 1 31 18 14 18 13 18 28 3 11 3 10 3 33 19 16 19 15 19 29 20 12 20 11 20 24 6 7 6 8 6 26 21 9 21 12 21 21 8 4 8 5 8 23 9 6 9 7 9 27 22 10 22 9 22 20 23 3 23 4 23 14 24 2 24 1 24 1 25 10 25 11 25 11 12 13 12 14 12 22 26 5 26 6 26 19 27 2 27 3 27 4 12 3 12 16 12 3 28 2 28 15 28 16 12 3 12 15 12 2 12 14 12 15 12 6 12 5 12 12 12 5 12 4 12 12 12 8 29 7 29 6 29 1 12 0 12 10 12 0 12 8 12 9 12 9 12 10 12 0 12 13 30 11 30 12 30 16 12 13 12 4 12 13 31 12 31 4 31 12 32 9 32 8 32 17 15 0 15 1 15 25 16 8 16 0 16 18 17 1 17 2 17</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="element_001-mesh" name="element.001">
+      <mesh>
+        <source id="element_001-mesh-positions">
+          <float_array id="element_001-mesh-positions-array" count="24">122.9045 -156.7804 0 152.2089 -133.8144 0 29.30419 22.97664 0 0 0 0 122.9045 -156.7804 15.47559 152.2089 -133.8144 15.47559 29.30419 22.97664 15.47559 0 0 15.47559</float_array>
+          <technique_common>
+            <accessor source="#element_001-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element_001-mesh-normals">
+          <float_array id="element_001-mesh-normals-array" count="24">-0.7870008 -0.6169519 0 0.616843 -0.7870863 0 0.7870207 0.6169267 0 -0.6170229 0.7869452 0 0 0 1 0.6168422 -0.7870869 0 0.7870206 0.6169267 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#element_001-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element_001-mesh-vertices">
+          <input semantic="POSITION" source="#element_001-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#element_001-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element_001-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 4 4 6 4 7 4 0 0 4 0 7 0 1 5 5 5 4 5 2 6 6 6 5 6 3 3 7 3 6 3 4 7 5 7 6 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="element-mesh" name="element">
+      <mesh>
+        <source id="element-mesh-positions">
+          <float_array id="element-mesh-positions-array" count="24">0 0 0 41.55248 33.21809 0 -15.68343 109.8389 0 -58.83032 76.39847 0 0 0 18.68624 41.55248 33.21809 18.68624 -15.68343 109.8389 18.68624 -58.83032 76.39847 18.68624</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element-mesh-normals">
+          <float_array id="element-mesh-normals-array" count="24">-0.7923119 -0.6101164 0 0.6244212 -0.7810879 0 0.8011513 0.5984619 0 -0.6125896 0.7904012 0 0 0 1 0.8011513 0.5984619 0 -0.6125897 0.7904012 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element-mesh-vertices">
+          <input semantic="POSITION" source="#element-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#element-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 5 4 7 4 4 4 0 0 4 0 7 0 1 1 5 1 4 1 2 5 6 5 5 5 3 6 7 6 6 6 5 7 6 7 7 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_45_osm_buildings" name="map_45.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="element" name="element" type="NODE">
+          <matrix sid="transform">1 0 0 42.24035 0 1 0 -186.7488 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element-mesh" name="element">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="element_001" name="element.001" type="NODE">
+          <matrix sid="transform">1 0 0 60.9843 0 1 0 -56.04845 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element_001-mesh" name="element.001">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="Centro_de_Transportes_de_Madrid" name="Centro de Transportes de Madrid" type="NODE">
+          <matrix sid="transform">1 0 0 9.220093 0 1 0 -18.51176 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Centro_de_Transportes_de_Madrid-mesh" name="Centro de Transportes de Madrid">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

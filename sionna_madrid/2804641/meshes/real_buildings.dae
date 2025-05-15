@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-27T16:39:02</created>
+    <modified>2025-01-27T16:39:02</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Edificio_Norte_3-mesh" name="Edificio Norte 3">
+      <mesh>
+        <source id="Edificio_Norte_3-mesh-positions">
+          <float_array id="Edificio_Norte_3-mesh-positions-array" count="24">-4.620651 -5.165258 0 31.53283 -38.39379 0 63.84337 -2.281305 0 27.85919 30.41274 0 -4.620651 -5.165258 15.88582 31.53283 -38.39379 15.88582 63.84337 -2.281305 15.88582 27.85919 30.41274 15.88582</float_array>
+          <technique_common>
+            <accessor source="#Edificio_Norte_3-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Edificio_Norte_3-mesh-normals">
+          <float_array id="Edificio_Norte_3-mesh-normals-array" count="24">-0.7385312 0.6742194 0 -0.6766963 -0.7362624 0 0.7452478 -0.6667877 0 0.6724605 0.7401331 0 0 0 1 0.7452477 -0.6667877 0 0.6724606 0.740133 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Edificio_Norte_3-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Edificio_Norte_3-mesh-vertices">
+          <input semantic="POSITION" source="#Edificio_Norte_3-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#Edificio_Norte_3-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Edificio_Norte_3-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 4 4 6 4 7 4 0 0 4 0 7 0 1 1 5 1 4 1 2 5 6 5 5 5 3 6 7 6 6 6 4 7 5 7 6 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Edificio_Norte_2-mesh" name="Edificio Norte 2">
+      <mesh>
+        <source id="Edificio_Norte_2-mesh-positions">
+          <float_array id="Edificio_Norte_2-mesh-positions-array" count="24">0 0 0 36.39846 -32.03781 0 68.09153 4.352623 0 32.53093 36.30122 0 0 0 20.13762 36.39846 -32.03781 20.13762 68.09153 4.352623 20.13762 32.53093 36.30122 20.13762</float_array>
+          <technique_common>
+            <accessor source="#Edificio_Norte_2-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Edificio_Norte_2-mesh-normals">
+          <float_array id="Edificio_Norte_2-mesh-normals-array" count="21">-0.7447223 0.6673744 0 -0.6607112 -0.7506402 0 0.7541003 -0.6567595 0 0.668318 0.7438757 0 0 0 1 0.7541003 -0.6567593 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Edificio_Norte_2-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Edificio_Norte_2-mesh-vertices">
+          <input semantic="POSITION" source="#Edificio_Norte_2-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#Edificio_Norte_2-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Edificio_Norte_2-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 4 4 6 4 7 4 0 0 4 0 7 0 1 1 5 1 4 1 2 5 6 5 5 5 3 3 7 3 6 3 4 6 5 6 6 6</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="Edificio_Norte_1-mesh" name="Edificio Norte 1">
+      <mesh>
+        <source id="Edificio_Norte_1-mesh-positions">
+          <float_array id="Edificio_Norte_1-mesh-positions-array" count="24">0 0 0 35.7717 -31.75962 0 67.40529 3.573181 0 31.9552 35.58868 0 0 0 18.07404 35.7717 -31.75962 18.07404 67.40529 3.573181 18.07404 31.9552 35.58868 18.07404</float_array>
+          <technique_common>
+            <accessor source="#Edificio_Norte_1-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Edificio_Norte_1-mesh-normals">
+          <float_array id="Edificio_Norte_1-mesh-normals-array" count="21">-0.7440694 0.6681024 0 -0.6639265 -0.747798 0 0.7450315 -0.6670293 0 0.6702409 0.7421436 0 0 0 1 0.7450314 -0.6670295 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Edificio_Norte_1-mesh-normals-array" count="7" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Edificio_Norte_1-mesh-vertices">
+          <input semantic="POSITION" source="#Edificio_Norte_1-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#Edificio_Norte_1-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Edificio_Norte_1-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 5 4 7 4 4 4 0 0 4 0 7 0 1 1 5 1 4 1 2 5 6 5 5 5 3 3 7 3 6 3 5 6 6 6 7 6</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="element-mesh" name="element">
+      <mesh>
+        <source id="element-mesh-positions">
+          <float_array id="element-mesh-positions-array" count="84">0 0 0 37.36278 42.45782 0 -64.44522 134.9521 0 -213.5185 -31.43626 0 -106.9877 -126.8825 0 -71.57015 -87.35296 0 -124.2096 -40.18687 0 -129.0334 -45.56357 0 -141.8631 -34.07533 0 -51.23454 67.06952 0 -38.73492 55.87086 0 -43.35557 50.7056 0 -40.66439 48.28999 0 -46.11439 42.20078 0 0 0 16.4327 37.36278 42.45782 16.4327 -64.44522 134.9521 16.4327 -213.5185 -31.43626 16.4327 -106.9877 -126.8825 16.4327 -71.57015 -87.35296 16.4327 -124.2096 -40.18687 16.4327 -129.0334 -45.56357 16.4327 -141.8631 -34.07533 16.4327 -51.23454 67.06952 16.4327 -38.73492 55.87086 16.4327 -43.35557 50.7056 16.4327 -40.66439 48.28999 16.4327 -46.11439 42.20078 16.4327</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-positions-array" count="28" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="element-mesh-normals">
+          <float_array id="element-mesh-normals-array" count="84">-0.6751094 -0.7377177 0 0.7507145 -0.660627 0 0.6724401 0.7401516 0 -0.7447974 0.6672907 0 -0.6672967 -0.7447921 0 0.7447825 -0.6673074 0 0.6673265 0.7447654 0 -0.744336 0.6678053 0 0.6670861 0.7449806 0 0.7447634 -0.6673287 0 -0.6672842 -0.7448032 0 -0.7453055 0.6667231 0 -0.6679763 -0.7441826 0 -0.7451345 0.6669142 0 0 0 1 -0.7447976 0.6672906 0 0.7447826 -0.6673073 0 0.6673264 0.7447655 0 0.667087 0.7449798 0 0.7447633 -0.6673287 0 -0.667284 -0.7448034 0 -0.6679784 -0.7441807 0 -0.7451336 0.6669153 0 0 0 1 -1.49435e-7 0 1 0 0 1 0 0 1 -3.48491e-7 0 1</float_array>
+          <technique_common>
+            <accessor source="#element-mesh-normals-array" count="28" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="element-mesh-vertices">
+          <input semantic="POSITION" source="#element-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="40">
+          <input semantic="VERTEX" source="#element-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#element-mesh-normals" offset="1"/>
+          <p>0 0 27 0 13 0 1 1 14 1 0 1 2 2 15 2 1 2 3 3 16 3 2 3 4 4 17 4 3 4 5 5 18 5 4 5 6 6 19 6 5 6 7 7 20 7 6 7 8 8 21 8 7 8 9 9 22 9 8 9 10 10 23 10 9 10 11 11 24 11 10 11 12 12 25 12 11 12 13 13 26 13 12 13 22 14 23 14 16 14 0 0 14 0 27 0 1 1 15 1 14 1 2 2 16 2 15 2 3 15 17 15 16 15 4 4 18 4 17 4 5 16 19 16 18 16 6 17 20 17 19 17 7 7 21 7 20 7 8 18 22 18 21 18 9 19 23 19 22 19 10 20 24 20 23 20 11 11 25 11 24 11 12 21 26 21 25 21 13 22 27 22 26 22 27 14 14 14 26 14 14 23 15 23 26 23 17 14 18 14 21 14 18 14 19 14 21 14 19 24 20 24 21 24 24 14 25 14 26 14 24 25 26 25 15 25 17 26 21 26 22 26 23 27 24 27 16 27 24 14 15 14 16 14 17 14 22 14 16 14</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_472_osm_buildings" name="map_472.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="element" name="element" type="NODE">
+          <matrix sid="transform">1 0 0 93.86198 0 1 0 -72.55195 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#element-mesh" name="element">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="Edificio_Norte_1" name="Edificio Norte 1" type="NODE">
+          <matrix sid="transform">1 0 0 -52.52749 0 1 0 81.03515 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Edificio_Norte_1-mesh" name="Edificio Norte 1">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="Edificio_Norte_2" name="Edificio Norte 2" type="NODE">
+          <matrix sid="transform">1 0 0 -30.60948 0 1 0 -4.603061 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Edificio_Norte_2-mesh" name="Edificio Norte 2">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+        <node id="Edificio_Norte_3" name="Edificio Norte 3" type="NODE">
+          <matrix sid="transform">1 0 0 55.12706 0 1 0 -16.68108 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Edificio_Norte_3-mesh" name="Edificio Norte 3">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

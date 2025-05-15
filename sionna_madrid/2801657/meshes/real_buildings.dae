@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-27T15:36:18</created>
+    <modified>2025-01-27T15:36:18</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Residencia_para_Mayores_Pinar_de_Aravaca-mesh" name="Residencia para Mayores Pinar de Aravaca">
+      <mesh>
+        <source id="Residencia_para_Mayores_Pinar_de_Aravaca-mesh-positions">
+          <float_array id="Residencia_para_Mayores_Pinar_de_Aravaca-mesh-positions-array" count="72">0.7029362 -12.6125 0 24.73147 -11.27672 0 25.42598 -11.62181 0 45.81261 -42.3571 0 56.52679 -35.25489 0 37.89337 -7.157893 0 37.55458 -1.07985 0 50.52159 24.65724 0 39.0452 30.4347 0 25.93417 4.408197 0 21.0641 1.179935 0 0 0 0 0.7029362 -12.6125 16.3273 24.73147 -11.27672 16.3273 25.42598 -11.62181 16.3273 45.81261 -42.3571 16.3273 56.52679 -35.25489 16.3273 37.89337 -7.157893 16.3273 37.55458 -1.07985 16.3273 50.52159 24.65724 16.3273 39.0452 30.4347 16.3273 25.93417 4.408197 16.3273 21.0641 1.179935 16.3273 0 0 16.3273</float_array>
+          <technique_common>
+            <accessor source="#Residencia_para_Mayores_Pinar_de_Aravaca-mesh-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Residencia_para_Mayores_Pinar_de_Aravaca-mesh-normals">
+          <float_array id="Residencia_para_Mayores_Pinar_de_Aravaca-mesh-normals-array" count="69">-0.9984505 -0.05564689 0 0.05550575 -0.9984584 0 -0.4449757 -0.8955426 0 -0.833344 -0.5527548 0 0.5525133 -0.8335041 0 0.8333883 0.5526881 0 0.9984502 0.05565327 0 0.8930563 -0.4499451 0 0.4496565 0.8932015 0 -0.8930812 0.4498956 0 -0.5525124 0.8335047 0 -0.0559287 0.9984348 0 0 0 1 -0.4449777 -0.8955417 0 0.8333881 0.5526882 0 0.9984501 0.05565571 0 0.8930565 -0.4499447 0 0.4496563 0.8932017 0 -0.8930811 0.4498957 0 -0.5525118 0.8335052 0 0 0 1 1.40837e-7 0 1 -1.97423e-7 0 1</float_array>
+          <technique_common>
+            <accessor source="#Residencia_para_Mayores_Pinar_de_Aravaca-mesh-normals-array" count="23" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Residencia_para_Mayores_Pinar_de_Aravaca-mesh-vertices">
+          <input semantic="POSITION" source="#Residencia_para_Mayores_Pinar_de_Aravaca-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="34">
+          <input semantic="VERTEX" source="#Residencia_para_Mayores_Pinar_de_Aravaca-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Residencia_para_Mayores_Pinar_de_Aravaca-mesh-normals" offset="1"/>
+          <p>0 0 23 0 11 0 1 1 12 1 0 1 2 2 13 2 1 2 3 3 14 3 2 3 4 4 15 4 3 4 5 5 16 5 4 5 6 6 17 6 5 6 7 7 18 7 6 7 8 8 19 8 7 8 9 9 20 9 8 9 10 10 21 10 9 10 11 11 22 11 10 11 14 12 18 12 21 12 0 0 12 0 23 0 1 1 13 1 12 1 2 13 14 13 13 13 3 3 15 3 14 3 4 4 16 4 15 4 5 14 17 14 16 14 6 15 18 15 17 15 7 16 19 16 18 16 8 17 20 17 19 17 9 18 21 18 20 18 10 19 22 19 21 19 11 11 23 11 22 11 23 12 12 12 22 12 12 20 13 20 22 20 14 12 15 12 17 12 15 21 16 21 17 21 22 12 13 12 21 12 13 12 14 12 21 12 19 12 20 12 18 12 20 12 21 12 18 12 14 22 17 22 18 22</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_230_osm_buildings" name="map_230.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Residencia_para_Mayores_Pinar_de_Aravaca" name="Residencia para Mayores Pinar de Aravaca" type="NODE">
+          <matrix sid="transform">1 0 0 -28.78797 0 1 0 6.297211 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Residencia_para_Mayores_Pinar_de_Aravaca-mesh" name="Residencia para Mayores Pinar de Aravaca">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

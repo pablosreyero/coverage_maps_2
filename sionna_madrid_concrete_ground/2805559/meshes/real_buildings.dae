@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-30T18:19:06</created>
+    <modified>2025-01-30T18:19:06</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Casa_Club-mesh" name="Casa Club">
+      <mesh>
+        <source id="Casa_Club-mesh-positions">
+          <float_array id="Casa_Club-mesh-positions-array" count="24">-1.092515 -38.31616 0 21.70546 -38.97294 0 22.80633 -0.6567745 0 0 0 0 -1.092515 -38.31616 16.88093 21.70546 -38.97294 16.88093 22.80633 -0.6567745 16.88093 0 0 16.88093</float_array>
+          <technique_common>
+            <accessor source="#Casa_Club-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Casa_Club-mesh-normals">
+          <float_array id="Casa_Club-mesh-normals-array" count="24">-0.9995937 0.02850157 0 -0.02879673 -0.9995853 0 0.9995875 -0.0287193 0 0.02878594 0.9995856 0 0 0 1 -0.02879673 -0.9995853 0 0.9995875 -0.02871918 0 1.39628e-7 0 1</float_array>
+          <technique_common>
+            <accessor source="#Casa_Club-mesh-normals-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Casa_Club-mesh-vertices">
+          <input semantic="POSITION" source="#Casa_Club-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="10">
+          <input semantic="VERTEX" source="#Casa_Club-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Casa_Club-mesh-normals" offset="1"/>
+          <p>0 0 7 0 3 0 1 1 4 1 0 1 2 2 5 2 1 2 3 3 6 3 2 3 4 4 6 4 7 4 0 0 4 0 7 0 1 5 5 5 4 5 2 6 6 6 5 6 3 3 7 3 6 3 4 7 5 7 6 7</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_514_osm_buildings" name="map_514.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Casa_Club" name="Casa Club" type="NODE">
+          <matrix sid="transform">1 0 0 -8.004657 0 1 0 22.87709 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Casa_Club-mesh" name="Casa Club">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

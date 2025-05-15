@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.0.0 commit date:2023-11-13, commit time:17:26, hash:878f71061b8e</authoring_tool>
+    </contributor>
+    <created>2025-01-27T16:32:23</created>
+    <modified>2025-01-27T16:32:23</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="itu_concrete-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="itu_concrete-material" name="itu_concrete">
+      <instance_effect url="#itu_concrete-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="Parroquia_Divino_Salvador-mesh" name="Parroquia Divino Salvador">
+      <mesh>
+        <source id="Parroquia_Divino_Salvador-mesh-positions">
+          <float_array id="Parroquia_Divino_Salvador-mesh-positions-array" count="42">2.488457 -2.526924 0 9.107369 -4.864571 0 15.92944 -8.081627 0 29.13348 -16.02968 0 40.47525 -10.54147 0 24.91794 17.83366 0 0 0 0 2.488457 -2.526924 16.19382 9.107369 -4.864571 16.19382 15.92944 -8.081627 16.19382 29.13348 -16.02968 16.19382 40.47525 -10.54147 16.19382 24.91794 17.83366 16.19382 0 0 16.19382</float_array>
+          <technique_common>
+            <accessor source="#Parroquia_Divino_Salvador-mesh-positions-array" count="14" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Parroquia_Divino_Salvador-mesh-normals">
+          <float_array id="Parroquia_Divino_Salvador-mesh-normals-array" count="39">-0.7125093 -0.7016627 0 -0.3330177 -0.9429206 0 -0.4265212 -0.9044777 0 -0.5157179 -0.8567585 0 0.4355775 -0.9001513 0 0.8768547 0.4807556 0 -0.5819972 0.8131909 0 0 0 1 -0.4265211 -0.9044777 0 0.4355774 -0.9001513 0 6.99408e-7 0 1 0 0 1 -2.15191e-7 0 1</float_array>
+          <technique_common>
+            <accessor source="#Parroquia_Divino_Salvador-mesh-normals-array" count="13" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Parroquia_Divino_Salvador-mesh-vertices">
+          <input semantic="POSITION" source="#Parroquia_Divino_Salvador-mesh-positions"/>
+        </vertices>
+        <triangles material="itu_concrete-material" count="19">
+          <input semantic="VERTEX" source="#Parroquia_Divino_Salvador-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#Parroquia_Divino_Salvador-mesh-normals" offset="1"/>
+          <p>0 0 13 0 6 0 1 1 7 1 0 1 2 2 8 2 1 2 3 3 9 3 2 3 4 4 10 4 3 4 5 5 11 5 4 5 6 6 12 6 5 6 11 7 12 7 9 7 0 0 7 0 13 0 1 1 8 1 7 1 2 8 9 8 8 8 3 3 10 3 9 3 4 9 11 9 10 9 5 5 12 5 11 5 6 6 13 6 12 6 13 10 7 10 8 10 9 11 10 11 11 11 13 12 8 12 12 12 8 11 9 11 12 11</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="map_444_osm_buildings" name="map_444.osm_buildings" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="Parroquia_Divino_Salvador" name="Parroquia Divino Salvador" type="NODE">
+          <matrix sid="transform">1 0 0 69.5842 0 1 0 -69.70728 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#Parroquia_Divino_Salvador-mesh" name="Parroquia Divino Salvador">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="itu_concrete-material" target="#itu_concrete-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
