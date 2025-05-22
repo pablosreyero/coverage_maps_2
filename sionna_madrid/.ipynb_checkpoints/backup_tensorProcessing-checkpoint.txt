@@ -1,0 +1,55 @@
+
+# Your CSV dataset
+datasets = ['sionna_madrid', 'sionna_madrid_concrete_ground']
+
+for dataset in datasets:
+    df = pd.read_csv(f'{dataset}/scene_charact_{dataset}2025-05-15.csv', sep=',')
+    
+    # Define bin edges and labels (in dBm)
+    bins = [float('-inf'), -120, -100, -90, -80, float('inf')]
+    labels = ['very_poor', 'poor', 'fair', 'good', 'excellent']
+    
+    # Add new columns if not already present
+    for label in labels:
+        if f'percent_{label}' not in df.columns:
+            df[f'percent_{label}'] = np.nan
+    
+    for idx, row in df.iterrows():
+        name = str(row['scene_name'])
+        # Change to the actual path where your tensors are stored
+        tensor_path = os.path.join(f'{dataset}', name, 'cm_tensor_dB.npy')
+        if not os.path.exists(tensor_path):
+            print(f"Tensor not found for scene {name}")
+            continue
+    
+        # Load tensor (shape: 3,1,200,200)
+        tensor = np.load(tensor_path)
+        # Flatten all values for global statistics and binning
+        # values = tensor.flatten()
+
+        print(type(tensor))
+        tensor = tf.reduce_max(tensor, axis=0)
+        
+    #     # Histogram for RSRP classes
+    #     total_cells = values.size
+    #     hist, _ = np.histogram(values, bins=bins)
+    #     pct = hist / total_cells
+
+    #     # Tensor statistics
+    #     tensor_tf = tf.convert_to_tensor(values)
+    #     tensor_max = float(tf.reduce_max(tensor_tf).numpy())
+    #     tensor_min = float(tf.reduce_min(tensor_tf).numpy())
+    #     tensor_mean = float(tf.reduce_mean(tensor_tf).numpy())
+    #     tensor_median = float(np.median(values))
+
+    #     # Assign stats to DataFrame
+    #     df.at[idx, 'tensor_max [dBm]'] = tensor_max
+    #     df.at[idx, 'tensor_min [dBm]'] = tensor_min
+    #     df.at[idx, 'tensor_mean [dBm]'] = tensor_mean
+    #     df.at[idx, 'tensor_median [dBm]'] = tensor_median
+    #     for l, v in zip(labels, pct):
+    #         df.at[idx, f'percent_{l}'] = v
+    
+    # # Save the enriched CSV
+    # df.to_csv(f'{dataset}/scene_charact_{dataset}_TENSOR_info_{date.today()}.csv', sep=',', index=False)
+    # print("CSV updated with RSS/RSRP classification percentages.")
